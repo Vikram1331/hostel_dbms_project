@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Complaints</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='complaints.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div class="flash-messages" style="background-color: #d4edda; color: #155724; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
+              {% for message in messages %}
+                <p>{{ message }}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <h1>Complaints</h1>
+        <h3>Submit your complaint below</h3>
+
+        <form action="/submit_complaint" method="POST" class="complaint-form">
+            <textarea name="complaint_text" placeholder="Enter your complaint here..." required></textarea>
+            <button type="submit" class="submit-btn">Submit Complaint</button>
+        </form>
+
+        <a href="/dashboard" class="logout-btn">Back to Dashboard</a>
+
+        <div class="footer">
+            &copy; 2025 Hostel Management System
+        </div>
+    </div>
+</body>
+</html>

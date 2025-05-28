@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Complaints</title>
+    <link rel="stylesheet" href="/static/viewcomplaints.css">
+</head>
+<body>
+    <div class="complaints-container">
+        <h2>Complaints</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Email</th>
+                    <th>Complaint</th>
+                    <th>Timestamp</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for complaint in complaints %}
+                <tr>
+                    <td>{{ complaint.student_email }}</td>
+                    <td>{{ complaint.complaint_text }}</td>
+                    <td>{{ complaint.timestamp }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

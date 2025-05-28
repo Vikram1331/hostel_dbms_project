@@ -1,0 +1,85 @@
+/* Reset & Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    margin: 0;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+/* Header */
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a1a1a;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
+}
+
+/* Container */
+.complaints-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+th {
+    background: #4b79a1;
+    color: white;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+th:last-child {
+    border-right: none;
+}
+
+td {
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: #2f4f4f;
+    background-color: #f7fbff;
+    border-right: 1px solid #e0eaf3;
+}
+
+td:last-child {
+    border-right: none;
+}
+
+tr:hover td {
+    background-color: #e6f2ff;
+    transition: background-color 0.3s ease;
+}
+
+/* Resolve Button */
+.resolve-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #4caf50;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.resolve-btn:hover {
+    background-color: #388e3c;
+}

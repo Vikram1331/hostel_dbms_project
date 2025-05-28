@@ -1,0 +1,71 @@
+/* Reset and basics */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    margin: 0;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a2935;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.6);
+}
+
+/* Container */
+.attendance-container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+table th {
+    background: #ff8c42;
+    color: white;
+    padding: 15px 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+table th:last-child {
+    border-right: none;
+}
+
+table td {
+    padding: 15px 20px;
+    font-size: 1rem;
+    color: #34495e;
+    background-color: #fff7f0;
+    border-right: 1px solid #f1c8b0;
+}
+
+table td:last-child {
+    border-right: none;
+}
+
+/* Row hover effect */
+table tr:hover td {
+    background-color: #ffe6d2;
+    box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+    transition: all 0.3s ease;
+}

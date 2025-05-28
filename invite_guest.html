@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invite Guest</title>
+    <link rel="stylesheet" href="/static/invite_guest.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Invite Your Guest</h2>
+        <form method="POST" action="/guest_invite">
+            <label for="guest_name">Guest Name:</label>
+            <input type="text" name="guest_name" id="guest_name" placeholder="Enter Guest Name" required>
+
+            <label for="visit_date">Visit Date:</label>
+            <input type="date" name="visit_date" id="visit_date" required>
+
+            <button type="submit" class="main-btn">Generate Invite</button>
+        </form>
+
+        {% if invite_code %}
+            <div class="invite-code-display">
+                <p><strong>Invite Created!</strong> Share this code with your guest:</p>
+                <p class="invite-code">{{ invite_code }}</p>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

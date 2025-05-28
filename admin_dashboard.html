@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/admindashboard.css"> <!-- Linked CSS file -->
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- Fixed the image source path and added alt attribute -->
+        <img src="/static/dashboard.jpg" class="dashboardd" alt="Admin Dashboard Image">
+
+        <div class="greeting">
+            <h1>Welcome, Admin!</h1>
+            <h3>Role: Admin</h3>
+        </div>
+
+        <div class="card-grid">
+            <!-- View Complaints Card -->
+            <a class="card" href="/view_complaints">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/feedback.png" alt="Complaints Icon">
+                </div>
+                <h2>📝 View Complaints</h2>
+                <p>View complaints filed by hostel students.</p>
+            </a>
+
+            <!-- View Attendance Card -->
+            <a class="card" href="/view_attendance">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/checklist.png" alt="Attendance Icon">
+                </div>
+                <h2>📋 View Attendance</h2>
+                <p>View attendance records of hostel students.</p>
+            </a>
+
+            <!-- View Guest Invites Card -->
+            <a class="card" href="/view_guest_invites">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/invite.png" alt="Invite Icon">
+                </div>
+                <h2>👥 View Guest Invites</h2>
+                <p>View guest invite records for hostel students.</p>
+            </a>
+
+            <!-- Verify Guest Invite Card -->
+            <a class="card" href="/verify_guest">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/search.png" alt="Verify Invite Icon">
+                </div>
+                <h2>🔍 Verify Guest Invite</h2>
+                <p>Verify if a guest code is valid.</p>
+            </a>
+        </div>
+
+        <!-- Logout Button -->
+        <a href="/logout" class="logout-btn">Logout</a>
+    </div>
+</body>
+</html>

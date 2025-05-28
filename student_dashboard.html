@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/static/dashboard.css"> <!-- Linked CSS file -->
+</head>
+<body>
+    <div class="dashboard-container">
+        
+        <!-- Fixed the image source path and added alt attribute -->
+        <img src="/static/dashboard.jpg" class="dashboardd" alt="Dashboard Image">
+
+        <div class="greeting">
+            <h1>Hello, {{ session['email'] }}!</h1>
+            <h3>Role: {{ session['role'].capitalize() }}</h3>
+        </div>
+
+        <div class="card-grid">
+            <!-- Mark Attendance Card -->
+            <a class="card" href="/attendance">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/checklist.png" alt="Attendance Icon">
+                </div>
+                <h2>📋 Mark Attendance</h2>
+                <p>Mark your daily hostel presence easily.</p>
+            </a>
+
+            <!-- Invite Guest Card -->
+            <a class="card" href="/guest_invite">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/invite.png" alt="Invite Guest Icon">
+                </div>
+                <h2>👥 Invite Guest</h2>
+                <p>Generate a unique code for guest entry.</p>
+            </a>
+
+            <!-- Verify Invite Card (Visible only to admin) -->
+            {% if session['role'] == 'admin' %}
+            <a class="card" href="/verify_invite">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/search.png" alt="Verify Invite Icon">
+                </div>
+                <h2>🔍 Verify Guest Invite</h2>
+                <p>Verify if a guest code is valid.</p>
+            </a>
+            {% endif %}
+
+            <a class="card" href="/complaints">
+                <div class="card-icon">
+                    <img src="https://img.icons8.com/ios/50/000000/feedback.png" alt="Complaints Icon">
+                </div>
+                <h2>📝 Complaints</h2>
+                <p>File complaints regarding hostel issues easily.</p>
+            </a>
+            
+
+        <!-- Logout Button -->
+         <!-- Logout Button -->
+<a href="/logout" class="logout-btn" style="display: block; text-align: center; margin-top: 20px;">Logout</a>
+</body>
+</html>

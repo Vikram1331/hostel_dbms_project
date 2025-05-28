@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Guest Invites</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='view_guest_invites.css') }}">
+</head>
+<body>
+
+    <h1>Guest Invites</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Guest Name</th>
+                <th>Invite Code</th>
+                <th>Invited By (Student Email)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for invite in invites %}
+            <tr>
+                <td>{{ invite.guest_name }}</td>
+                <td>{{ invite.invite_code }}</td>
+                <td>{{ invite.student_email }}</td>
+            </tr>
+            {% else %}
+            <tr>
+                <td colspan="4">No guest invites found.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <a class="back-link" href="/dashboard">Back to Dashboard</a>
+
+</body>
+</html>

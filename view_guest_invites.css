@@ -1,0 +1,107 @@
+/* Reset and basics */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    margin: 0;
+    padding: 40px 20px;
+    color: #2c3e50;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #1a2935;
+    text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+thead tr {
+    background: #4a90e2;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+thead th {
+    padding: 15px 20px;
+    border-right: 1px solid rgba(255,255,255,0.3);
+}
+
+thead th:last-child {
+    border-right: none;
+}
+
+tbody tr {
+    background: #f9fbfc;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-radius: 8px;
+}
+
+tbody tr:hover {
+    background: #e4f0ff;
+    box-shadow: 0 8px 15px rgba(74, 144, 226, 0.4);
+    transform: translateY(-5px);
+}
+
+tbody td {
+    padding: 15px 20px;
+    border-right: 1px solid #e1e6eb;
+    font-size: 1rem;
+    color: #34495e;
+}
+
+tbody td:last-child {
+    border-right: none;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* No data row */
+tbody tr td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #7f8c8d;
+    padding: 25px 0;
+}
+
+/* Back to dashboard link */
+.back-link {
+    display: inline-block;
+    margin: 30px auto 0;
+    padding: 12px 28px;
+    background: #4a90e2;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.back-link:hover {
+    background: #357abd;
+    box-shadow: 0 8px 25px rgba(53, 122, 189, 0.6);
+}

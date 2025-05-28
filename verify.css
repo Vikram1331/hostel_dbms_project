@@ -1,0 +1,59 @@
+ /* Base form styling */
+.form-container {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-container input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-container button.main-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button.main-btn:hover {
+    background-color: #45a049;
+}
+
+/* Add hover effect to form input */
+.form-container input[type="text"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Adjust button for mobile and tablet responsiveness */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .form-container h2 {
+        font-size: 20px;
+    }
+}

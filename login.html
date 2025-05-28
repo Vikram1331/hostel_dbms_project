@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Hostel Management System</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Welcome Back</h2>
+        <p class="subtext">Please login to continue</p>
+        
+        <form action="/login" method="POST">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            
+            <div class="role-select">
+                <label for="role">Login As:</label>
+                <select name="role" id="role" required>
+                    <option value="student">Student</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+
+            <button type="submit" class="main-btn">Login</button>
+
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="error">{{ messages[0] }}</div>
+              {% endif %}
+            {% endwith %}
+        </form>
+    </div>
+</body>
+</html>
