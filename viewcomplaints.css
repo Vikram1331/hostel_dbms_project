@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
+    background: linear-gradient(135deg, #d0f0c0 0%, #e0fbe0 100%);
     margin: 0;
     padding: 40px 20px;
     color: #2c3e50;
@@ -17,7 +17,7 @@ h2 {
     margin-bottom: 30px;
     font-size: 2.5rem;
     font-weight: bold;
-    color: #1a1a1a;
+    color: #14532d;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.6);
 }
 
@@ -39,7 +39,7 @@ table {
 }
 
 th {
-    background: #4b79a1;
+    background: #43a047;
     color: white;
     padding: 15px 20px;
     text-transform: uppercase;
@@ -55,17 +55,20 @@ td {
     padding: 15px 20px;
     font-size: 1rem;
     color: #2f4f4f;
-    background-color: #f7fbff;
-    border-right: 1px solid #e0eaf3;
+    background-color: #f3fdf3;
+    border-right: 1px solid #c8e6c9;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 td:last-child {
     border-right: none;
 }
 
+/* Hover Effect - Lift and Glow */
 tr:hover td {
-    background-color: #e6f2ff;
-    transition: background-color 0.3s ease;
+    background-color: #dcedc8;
+    box-shadow: 0 6px 12px rgba(76, 175, 80, 0.25);
+    transform: translateY(-4px);
 }
 
 /* Resolve Button */

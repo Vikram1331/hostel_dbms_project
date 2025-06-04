@@ -2,29 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mark Attendance</title>
     <link rel="stylesheet" href="/static/mark_attendance.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="dashboard-container">
-        <h2>Mark Your Attendance</h2>
-
-        {% with messages = get_flashed_messages() %}
-          {% if messages %}
-            <div class="flash-messages" style="background-color: #d4edda; color: #155724; padding: 10px; margin-bottom: 15px; border-radius: 5px;">
-              {% for message in messages %}
-                <p>{{ message }}</p>
-              {% endfor %}
+        <div class="card">
+            <div class="icon-circle">
+                ✅
             </div>
-          {% endif %}
-        {% endwith %}
+            <h2>Mark Your Attendance</h2>
+            <p class="subtitle">Confirm your presence in the hostel by clicking the button below.</p>
 
-        <form method="POST" action="/attendance">
-            <input type="hidden" name="location" value="hostel" />
-            <button type="submit" class="main-btn">Submit Attendance</button>
-        </form>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="flash-messages">
+                  {% for message in messages %}
+                    <p>{{ message }}</p>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endwith %}
 
-        <a href="/dashboard" class="logout-btn" style="margin-top: 20px; display: inline-block;">Back to Dashboard</a>
+            <form method="POST" action="/attendance">
+                <input type="hidden" name="location" value="hostel" />
+                <button type="submit" class="main-btn">📋 Submit Attendance</button>
+            </form>
+
+            <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+        </div>
     </div>
 </body>
 </html>

@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+    background: #eaf6ea; /* very light greenish-white background */
     margin: 0;
     padding: 40px 20px;
     color: #2c3e50;
@@ -16,7 +16,7 @@ h1 {
     margin-bottom: 30px;
     font-size: 2.8rem;
     font-weight: 700;
-    color: #1a2935;
+    color: #2e7d32; /* dark green */
     text-shadow: 1px 1px 3px rgba(255,255,255,0.7);
 }
 
@@ -32,7 +32,7 @@ table {
 }
 
 thead tr {
-    background: #4a90e2;
+    background: #4caf50; /* medium green */
     color: white;
     text-transform: uppercase;
     font-weight: 600;
@@ -49,7 +49,7 @@ thead th:last-child {
 }
 
 tbody tr {
-    background: #f9fbfc;
+    background: #f9fdf9; /* very light green */
     transition: transform 0.25s ease, box-shadow 0.25s ease;
     cursor: default;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -57,14 +57,14 @@ tbody tr {
 }
 
 tbody tr:hover {
-    background: #e4f0ff;
-    box-shadow: 0 8px 15px rgba(74, 144, 226, 0.4);
+    background: #d0f0c0; /* lighter green highlight on hover */
+    box-shadow: 0 8px 15px rgba(76, 175, 80, 0.4);
     transform: translateY(-5px);
 }
 
 tbody td {
     padding: 15px 20px;
-    border-right: 1px solid #e1e6eb;
+    border-right: 1px solid #dcedc8;
     font-size: 1rem;
     color: #34495e;
 }
@@ -90,18 +90,18 @@ tbody tr td[colspan="4"] {
     display: inline-block;
     margin: 30px auto 0;
     padding: 12px 28px;
-    background: #4a90e2;
+    background: #4caf50; /* medium green */
     color: white;
     font-weight: 600;
     text-decoration: none;
     border-radius: 25px;
-    box-shadow: 0 5px 15px rgba(74, 144, 226, 0.4);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
     font-size: 1.1rem;
 }
 
 .back-link:hover {
-    background: #357abd;
-    box-shadow: 0 8px 25px rgba(53, 122, 189, 0.6);
+    background: #388e3c; /* darker green on hover */
+    box-shadow: 0 8px 25px rgba(56, 142, 60, 0.6);
 }

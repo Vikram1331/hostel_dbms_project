@@ -1,62 +1,108 @@
-/* General body and layout settings */
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Body Background */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    padding: 20px;
 }
 
-/* Form container styles */
-.form-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Container */
+.dashboard-container {
     width: 100%;
-    max-width: 400px;
-    text-align: center;
+    max-width: 500px;
 }
 
-/* Heading styles */
+/* Card Style */
+.card {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+}
+
+/* Icon Circle */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #667eea;
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+/* Heading */
 h2 {
     font-size: 24px;
-    color: #333;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+/* Subtitle */
+.subtitle {
+    font-size: 15px;
+    color: #4a5568;
+    margin-bottom: 25px;
+}
+
+/* Flash messages */
+.flash-messages {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+/* Button */
+.main-btn {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
     margin-bottom: 20px;
 }
 
-/* Input field styling */
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.main-btn:hover {
+    background: linear-gradient(to right, #5a67d8, #6b46c1);
 }
 
-/* Submit button styling */
-button.main-btn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s ease;
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #667eea;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease;
 }
 
-/* Button hover effect */
-button.main-btn:hover {
-    background-color: #45a049;
-}
-
-/* Flash message styling */
-.flash {
-    color: #ff0000;
-    margin-top: 20px;
+.back-btn:hover {
+    color: #5a67d8;
 }

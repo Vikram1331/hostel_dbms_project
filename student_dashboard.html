@@ -8,16 +8,19 @@
 </head>
 <body>
     <div class="dashboard-container">
-        
-        <!-- Fixed the image source path and added alt attribute -->
+
+        <!-- Top banner image -->
         <img src="/static/dashboard.jpg" class="dashboardd" alt="Dashboard Image">
 
+        <!-- Greeting section -->
         <div class="greeting">
             <h1>Hello, {{ session['email'] }}!</h1>
             <h3>Role: {{ session['role'].capitalize() }}</h3>
         </div>
 
+        <!-- Card grid section -->
         <div class="card-grid">
+
             <!-- Mark Attendance Card -->
             <a class="card" href="/attendance">
                 <div class="card-icon">
@@ -36,7 +39,7 @@
                 <p>Generate a unique code for guest entry.</p>
             </a>
 
-            <!-- Verify Invite Card (Visible only to admin) -->
+            <!-- Verify Invite Card (admin only) -->
             {% if session['role'] == 'admin' %}
             <a class="card" href="/verify_invite">
                 <div class="card-icon">
@@ -47,6 +50,7 @@
             </a>
             {% endif %}
 
+            <!-- Complaints Card -->
             <a class="card" href="/complaints">
                 <div class="card-icon">
                     <img src="https://img.icons8.com/ios/50/000000/feedback.png" alt="Complaints Icon">
@@ -54,10 +58,13 @@
                 <h2>📝 Complaints</h2>
                 <p>File complaints regarding hostel issues easily.</p>
             </a>
-            
+        </div>
 
-        <!-- Logout Button -->
-         <!-- Logout Button -->
-<a href="/logout" class="logout-btn" style="display: block; text-align: center; margin-top: 20px;">Logout</a>
+        <!-- Centered Logout Button -->
+        <div style="text-align: center; margin-top: 30px;">
+            <a href="/logout" class="logout-btn">Logout</a>
+        </div>
+
+    </div>
 </body>
 </html>

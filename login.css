@@ -7,89 +7,124 @@
 }
 
 body {
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background: linear-gradient(to right, #f0f2f5, #e4e7eb);
   min-height: 100vh;
-  padding-top: 80px;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  color: #1a1a1a;
+  transition: background 0.4s ease;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Auth container */
 .auth-container {
-  background-color: #f7f7f7;
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   padding: 40px 30px;
-  border-radius: 12px;
   width: 100%;
   max-width: 400px;
   text-align: center;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-/* Dark mode auth container */
 body.dark-theme .auth-container {
-  background-color: #2a2a2a;
-  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+  background: rgba(40, 40, 40, 0.7);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.06);
 }
 
 /* Headings */
 .auth-container h2 {
-  font-size: 28px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #2c3e50;
   margin-bottom: 8px;
 }
 
-.auth-container h3 {
-  font-size: 16px;
+.auth-container .subtext {
+  font-size: 15px;
   margin-bottom: 24px;
-  color: #666;
+  color: #6b6b6b;
 }
 
 /* Inputs */
-.auth-container input {
+.auth-container input,
+.auth-container select {
   width: 100%;
   padding: 12px 14px;
   margin-bottom: 16px;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  background-color: #fff;
-  transition: border-color 0.3s ease;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #fafafa;
+  color: #333;
+  transition: 0.3s ease;
 }
 
-.auth-container input:focus {
-  border-color: #0077ff;
+.auth-container input:focus,
+.auth-container select:focus {
+  background: #fff;
+  border-color: #888;
   outline: none;
+  box-shadow: 0 0 0 2px #dcdcdc;
 }
 
-body.dark-theme input {
-  background-color: #444;
-  color: #fff;
+body.dark-theme input,
+body.dark-theme select {
+  background-color: #3b3b3b;
+  color: #f2f2f2;
   border: 1px solid #666;
+}
+
+/* Role select */
+.role-select {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.role-select label {
+  font-size: 14px;
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  color: #444;
 }
 
 /* Submit button */
 .main-btn {
   width: 100%;
   padding: 12px;
-  background-color: #0077ff;
+  background: linear-gradient(to right, #2c3e50, #4b6584);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .main-btn:hover {
-  background-color: #005ec2;
+  background: linear-gradient(to right, #1c2833, #34495e);
+  transform: scale(1.02);
 }
 
 /* Error text */
 .error {
-  color: red;
+  color: #d63031;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 12px;
 }

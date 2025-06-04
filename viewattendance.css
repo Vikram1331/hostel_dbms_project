@@ -5,7 +5,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    background: linear-gradient(135deg, #d2f8d2 0%, #a8e6cf 100%);
     margin: 0;
     padding: 40px 20px;
     color: #2c3e50;
@@ -16,7 +16,7 @@ h2 {
     margin-bottom: 30px;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #1a2935;
+    color: #14532d; /* Dark green */
     text-shadow: 1px 1px 3px rgba(255,255,255,0.6);
 }
 
@@ -38,7 +38,7 @@ table {
 }
 
 table th {
-    background: #ff8c42;
+    background: #43a047; /* Medium green */
     color: white;
     padding: 15px 20px;
     font-weight: 600;
@@ -54,9 +54,9 @@ table th:last-child {
 table td {
     padding: 15px 20px;
     font-size: 1rem;
-    color: #34495e;
-    background-color: #fff7f0;
-    border-right: 1px solid #f1c8b0;
+    color: #2e7d32; /* Darker green text */
+    background-color: #f3fdf3; /* Very light green row bg */
+    border-right: 1px solid #c8e6c9;
 }
 
 table td:last-child {
@@ -65,7 +65,7 @@ table td:last-child {
 
 /* Row hover effect */
 table tr:hover td {
-    background-color: #ffe6d2;
-    box-shadow: 0 4px 12px rgba(255, 140, 66, 0.3);
+    background-color: #dcedc8; /* Light green hover */
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
     transition: all 0.3s ease;
 }

@@ -1,80 +1,138 @@
-/* Reset some default styles for consistency */
+/* Reset and base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fa;  /* Light cool background */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-}
-
-/* Form container styling */
-.form-container {
-    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
 }
 
-/* Heading styles */
+/* Form container */
+.form-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    max-width: 420px;
+    width: 100%;
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+/* Heading */
 h2 {
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    color: #2e7d32;  /* Dark green */
+    font-size: 26px;
+    margin-bottom: 25px;
 }
 
-/* Input field styling */
-input[type="text"], input[type="date"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-/* Label styling */
+/* Labels and Inputs */
 label {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #333333;
+    margin-bottom: 6px;
     display: block;
 }
 
-/* Button styling */
+input[type="text"],
+input[type="date"] {
+    width: 100%;
+    padding: 12px 14px;
+    margin-bottom: 20px;
+    border: 1.8px solid #a5d6a7; /* Light green border */
+    border-radius: 8px;
+    font-size: 15px;
+    background-color: #f9fff9; /* Very light green tint */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #4caf50; /* Green */
+    background-color: #ffffff;
+    outline: none;
+}
+
+/* Submit Button */
 .main-btn {
     width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+    padding: 14px;
+    background-color: #4caf50; /* Green */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    font-weight: 600;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .main-btn:hover {
-    background-color: #45a049;
+    background-color: #388e3c; /* Darker green */
+    transform: scale(1.05);
 }
 
-/* Responsive Design for Smaller Screens */
-@media (max-width: 480px) {
+/* Invite Code Box */
+.invite-code-display {
+    background-color: #e8f5e9; /* Very light green */
+    border: 1.5px solid #4caf50; /* Green border */
+    padding: 18px;
+    border-radius: 10px;
+    margin-top: 22px;
+    text-align: center;
+    color: #2e7d32;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.invite-code {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1b5e20; /* Darker green */
+    margin-top: 12px;
+    letter-spacing: 1.2px;
+}
+
+/* Back Link */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 22px;
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 500px) {
     .form-container {
-        padding: 15px;
-        width: 90%;
+        padding: 30px 20px;
+    }
+
+    h2 {
+        font-size: 22px;
     }
 
     .main-btn {
-        font-size: 14px;
+        font-size: 15px;
     }
 }

@@ -1,17 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Verify Guest Invite</title>
-    <link rel="stylesheet" href="/static/verify.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='verify.css') }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <div class="form-container">
-        <h2>Verify Guest Invite</h2>
-        <form method="POST" action="/verify_guest">
-            <input type="text" name="invite_code" placeholder="Enter Invite Code" required>
-            <button type="submit" class="main-btn">Verify</button>
-        </form>
+    <div class="wrapper">
+        <div class="card">
+            <h1 class="title">🔑 Verify Guest Invite</h1>
+            <p class="description">
+                Please enter the unique invite code provided to verify their access.
+            </p>
+
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <div class="flash-message">
+                  {% for message in messages %}
+                    <p>{{ message }}</p>
+                  {% endfor %}
+                </div>
+              {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="/verify_guest" autocomplete="off" class="form">
+                <label for="invite_code" class="input-label">Invite Code</label>
+                <div class="input-group">
+                    <input
+                      type="text"
+                      id="invite_code"
+                      name="invite_code"
+                      placeholder="Enter Invite Code"
+                      required
+                      spellcheck="false"
+                      autocomplete="off"
+                    />
+                    <span class="input-icon">🔐</span>
+                </div>
+
+                <button type="submit" class="btn-submit">Verify</button>
+            </form>
+
+            <p class="help-text">
+                If you don't have an invite code, please <strong>contact the hostel administration.</strong>
+            </p>
+        </div>
     </div>
 </body>
 </html>

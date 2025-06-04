@@ -200,14 +200,10 @@ def verify_guest():
         else:
             flash('Invalid Invite Code!')
 
-        return redirect('/dashboard')
+        return redirect('/verify_guest')
 
-    return '''
-        <form method="post">
-            Invite Code: <input type="text" name="invite_code" required>
-            <input type="submit" value="Verify Guest">
-        </form>
-    '''
+    return render_template('verify_guest.html')
+
 
 @app.route('/logout')
 def logout():
